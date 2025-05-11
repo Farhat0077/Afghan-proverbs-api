@@ -56,3 +56,6 @@ http://localhost:3000/proverbs/8
     "meaning": "Small efforts cannot prevent major events from happening.",
     "category": "Pragmatism"
   }
+  
+### API Base URL
+https://afghan-proverbs-api-na79.onrender.com
