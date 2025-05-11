@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "textDari": "آب که از سر گذشت، چه یک ذرع چه صد ذرع.",
+    "textPashto": "اوبه چې له سره تېرې شوې، نو که یو متر که سل متر.",
+    "translation": "Once water passes over the head, whether one meter or a hundred meters, it makes no difference.",
+    "meaning": "When a situation reaches a critical point, small differences no longer matter.",
+    "category": "Wisdom"
+  },
+  {
+    "id": 2,
+    "textDari": "نیش عقرب نه از ره کین است، مقتضای طبیعتش این است.",
+    "textPashto": "د لېندې نیش د دښمنۍ نه دی، د هغه طبیعت همداسې دی.",
+    "translation": "The scorpion’s sting is not out of hatred; it is simply its nature.",
+    "meaning": "Some people behave negatively not out of malice but because it is in their nature.",
+    "category": "Human Nature"
+  },
+  {
+    "id": 3,
+    "textDari": "هر که بامش بیش، برفش بیشتر.",
+    "textPashto": "چا چې چت زیات وي، واوره یې هم ډېره وي.",
+    "translation": "The taller the roof, the more snow it carries.",
+    "meaning": "The greater one's wealth or status, the more responsibilities or troubles come with it.",
+    "category": "Life Experience"
+  },
+  {
+    "id": 4,
+    "textDari": "هر که خرش از پل گذشت، می‌گوید شتر است.",
+    "textPashto": "هر څوک چې خره له پل تېر شي، وايي چې دا شتر دی.",
+    "translation": "Once someone’s donkey crosses the bridge, they call it a camel.",
+    "meaning": "People tend to exaggerate their achievements or possessions once they’ve succeeded.",
+    "category": "Humility"
+  },
+  {
+    "id": 5,
+    "textDari": "دست بالای دست بسیار است.",
+    "textPashto": "له لاسه پورته لاسونه ډېر دي.",
+    "translation": "There is always a hand above another hand.",
+    "meaning": "No matter how powerful or skilled one is, there will always be someone greater.",
+    "category": "Reality"
+  },
+  {
+    "id": 6,
+    "textDari": "سنگ بزرگ نشانه نزدن است.",
+    "textPashto": "لوی کاڼی د نه ویشتلو نښه ده.",
+    "translation": "A big stone is a sign that it won’t be thrown.",
+    "meaning": "When someone makes extravagant promises, it usually means they won’t follow through.",
+    "category": "Caution"
+  },
+  {
+    "id": 7,
+    "textDari": "آب از آب تکان نمی‌خورد.",
+    "textPashto": "اوبه له اوبو نه خوځېږي.",
+    "translation": "Water does not disturb water.",
+    "meaning": "A situation remains unchanged despite external challenges.",
+    "category": "Resilience"
+  },
+  {
+    "id": 8,
+    "textDari": "با دستمال نمی‌شود جلوی آب را گرفت.",
+    "textPashto": "د لاسمال سره اوبه نه شي درېدلی.",
+    "translation": "You cannot stop water with a handkerchief.",
+    "meaning": "Small efforts cannot prevent major events from happening.",
+    "category": "Pragmatism"
+  },
+  {
+    "id": 9,
+    "textDari": "آنچه شیران را کند روباه مزاج، احتیاج است احتیاج است احتیاج.",
+    "textPashto": "هغه چې زمریان روباه مزاجه کوي، احتیاج دی، احتیاج دی، احتیاج.",
+    "translation": "What turns lions into foxes is necessity, necessity, necessity.",
+    "meaning": "Desperation can change even the strongest person’s behavior.",
+    "category": "Survival"
+  },
+{
+   "id": 10,
+   "textDari": "از غوره حلوا ساخته می‌شود.",
+   "textPashto": "له غوره نه حلوا جوړېږي.",
+   "translation": "Sour grapes turn into halwa.",
+   "meaning": "Patience transforms hardships into success.",
+   "category": "Patience"
+}
+
+]
