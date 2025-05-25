@@ -3,51 +3,55 @@ const fs = require("fs");
 const app = express();
 const PORT = 3000;
 
-// middleware setup
+// Middleware
 app.use(express.json());
 
-//data storage path
+// File to store proverbs
 const dataFile = "./info.json";
 
-//getting all proverbs
+// Read proverbs from file
 const getProverbs = () => {
   const data = fs.readFileSync(dataFile, "utf-8");
   return JSON.parse(data);
 };
 
-//saving  proverbs
+// Save proverbs to file
 const saveProverbs = (proverbs) => {
   fs.writeFileSync(dataFile, JSON.stringify(proverbs, null, 2));
 };
 
-//Routes
-
-//get/proverbs
+// GET /proverbs - get all proverbs
 app.get("/proverbs", (req, res) => {
   const proverbs = getProverbs();
   res.json(proverbs);
 });
 
-//get/proverbs/id
+// GET /proverbs/:id - get one proverb by ID
 app.get("/proverbs/:id", (req, res) => {
   const proverbs = getProverbs();
   const proverb = proverbs.find((p) => p.id === parseInt(req.params.id));
   if (proverb) {
     res.json(proverb);
   } else {
-    res.status(404).json({ message: "proverb with this id not found! " });
+    res.status(404).json({ message: "Proverb with this ID not found!" });
   }
 });
-// post/proverbs/id
+
+// POST /proverbs - create a new proverb with unique ID
 app.post("/proverbs", (req, res) => {
   const proverbs = getProverbs();
   const newProverb = req.body;
+
+  // Auto-generate a unique ID
+  const newId = proverbs.length > 0 ? Math.max(...proverbs.map(p => p.id)) + 1 : 1;
+  newProverb.id = newId;
+
   proverbs.push(newProverb);
   saveProverbs(proverbs);
   res.status(201).json(newProverb);
 });
 
-//put/proverbs/id
+// PUT /proverbs/:id - update a proverb by ID
 app.put("/proverbs/:id", (req, res) => {
   const proverbs = getProverbs();
   const index = proverbs.findIndex((p) => p.id === parseInt(req.params.id));
@@ -56,18 +60,16 @@ app.put("/proverbs/:id", (req, res) => {
     proverbs[index] = {
       ...proverbs[index],
       ...req.body,
-      id: proverbs[index].id,
+      id: proverbs[index].id, // Keep the original ID
     };
-
     saveProverbs(proverbs);
-
     res.json(proverbs[index]);
   } else {
-    res.status(404).json({ message: "Proverb with this id not found !" });
+    res.status(404).json({ message: "Proverb with this ID not found!" });
   }
 });
 
-//delet/proverbs/id
+// DELETE /proverbs/:id - delete a proverb by ID
 app.delete("/proverbs/:id", (req, res) => {
   const proverbs = getProverbs();
   const index = proverbs.findIndex((p) => p.id === parseInt(req.params.id));
@@ -77,9 +79,11 @@ app.delete("/proverbs/:id", (req, res) => {
     saveProverbs(proverbs);
     res.json(deleted);
   } else {
-    res.status(404).json({ message: "Proverb  with this id not found !" });
+    res.status(404).json({ message: "Proverb with this ID not found!" });
   }
 });
+
+// Start the server
 app.listen(PORT, () => {
-  console.log(`server is running  http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
